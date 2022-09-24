@@ -18,7 +18,7 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 entry_points = [
-    { console_scripts = ["pcb = pcb:cli"]},
+    { console_scripts = ["pcb = python_cli_base:cli"]},
 ]
 packages=["python_cli_base"]
 dependencies = [
@@ -34,5 +34,5 @@ pcb = "python_cli_base:cli"
 
 
 [tool.hatch.version]
-path = "pcb/__init__.py"
+path = "python_cli_base/__init__.py"
 
