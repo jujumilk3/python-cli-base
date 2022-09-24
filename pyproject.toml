@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "python-cli-base"
+dynamic = ["version"]
+description = "Base python cli project"
+readme = "README.md"
+requires-python = ">=3.6"
+license = "MIT"
+authors = [
+    { name = "gyudoza", email = "jujumilk3@gmail.com" },
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+entry_points = [
+    { console_scripts = ["pcb = pcb:cli"]},
+]
+packages=["python_cli_base"]
+dependencies = [
+    "click",
+]
+
+[project.urls]
+homepage = "https://github.com/jujumilk3/python-cli-base"
+bug-tracker = "https://github.com/jujumilk3/python-cli-base/issues"
+
+[project.entry-points.console_scripts]
+pcb = "python_cli_base:cli"
+
+
+[tool.hatch.version]
+path = "pcb/__init__.py"
+
